@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:posts_api/presentation/widgets/post_container.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -6,6 +7,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: Container(
         width: MediaQuery.sizeOf(context).width,
         height: MediaQuery.sizeOf(context).height,
@@ -14,6 +16,12 @@ class HomePage extends StatelessWidget {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [Color(0xFFD3E4EF), Color(0xFFEADAD7)])),
+        child: Column(
+          children: [
+            SizedBox(height: MediaQuery.sizeOf(context).height / 45,),
+            const PostsContainer(),
+          ],
+        ),
       ),
     );
   }
