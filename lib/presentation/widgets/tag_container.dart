@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class TagContainer extends StatelessWidget {
-  const TagContainer({Key? key}) : super(key: key);
+  final String tag;
+  const TagContainer({Key? key, required this.tag}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,13 +12,13 @@ class TagContainer extends StatelessWidget {
         height: MediaQuery.sizeOf(context).height / 23,
         width: MediaQuery.sizeOf(context).width / 5,
         decoration: BoxDecoration(
-            color: const Color(0xFFcaa49f),
+            color: const Color(0xFFc0cfd9),
             shape: BoxShape.rectangle,
             borderRadius: BorderRadius.circular(50)),
-        child: const Center(
+        child: Center(
             child: Text(
-              'tag',
-              style: TextStyle(
+              tag,
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
               ),
             )),
